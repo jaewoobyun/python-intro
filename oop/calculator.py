@@ -23,12 +23,22 @@ class Calculator(object): # object 는 객체 의미
     '''
     @staticmethod
     def main():
-        calc = Calculator(6, 2) # first_num = 6, second_num = 2
-        print(f'{calc.first_num} + {calc.second_num} = {calc.add()}')
-        print(f'{calc.first_num} - {calc.second_num} = {calc.sub()}')
-        print(f'{calc.first_num} * {calc.second_num} = {calc.mul()}')
-        print(f'{calc.first_num} / {calc.second_num} = {calc.div()}')
-        print('*' * 30)
+        while 1: #1 == true
+            menu = input('0-종료 1-계산기\n') # \n 줄바꿈
+            if menu == '0':
+                break
+            elif menu == '1':
+                first_num = int(input('첫번째 수'))
+                second_num = int(input('두번째 수'))
+                calc = Calculator(first_num, second_num)
+                print('*' * 30)
+                print(f'{calc.first_num} + {calc.second_num} = {calc.add()}')
+                print(f'{calc.first_num} - {calc.second_num} = {calc.sub()}')
+                print(f'{calc.first_num} * {calc.second_num} = {calc.mul()}')
+                print(f'{calc.first_num} / {calc.second_num} = {calc.div()}')
+                print('*' * 30)
+            else:
+                print('잘못된 메뉴 선택입니다.')
 
 
 if __name__ == '__main__': #캡슐화
