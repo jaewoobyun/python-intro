@@ -24,7 +24,6 @@ class Calculator(object): # object 는 객체 의미
     @staticmethod
     def main():
         calc = Calculator(6, 2) # first_num = 6, second_num = 2
-        print('*', *30)
         print(f'{calc.first_num} + {calc.second_num} = {calc.add()}')
         print(f'{calc.first_num} - {calc.second_num} = {calc.sub()}')
         print(f'{calc.first_num} * {calc.second_num} = {calc.mul()}')
@@ -32,7 +31,7 @@ class Calculator(object): # object 는 객체 의미
         print('*' * 30)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': #캡슐화
     Calculator.main()
 
 
